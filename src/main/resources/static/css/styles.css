@@ -1,0 +1,18 @@
+.pit {
+    background-color: #702110;
+    float: left;
+    clear: none;
+}
+.pit:hover{
+    background-color:#F0C123;
+}
+.store {
+    background-color:#1EDE00;
+}
+.stone{
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+    background: gray;
+    display: inline-block;
+}

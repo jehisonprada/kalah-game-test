@@ -1,0 +1,35 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.backbase.test'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile group: 'org.webjars', name: 'bootstrap', version: '3.3.6'
+	compile group: 'org.webjars', name: 'jquery', version: '3.2.1'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+	runtime('org.springframework.boot:spring-boot-devtools')
+	runtime('org.apache.tomcat.embed:tomcat-embed-jasper')
+	runtime('javax.servlet:jstl')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
